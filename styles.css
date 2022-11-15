@@ -116,60 +116,135 @@ html {
     font-size: 14px;
     font-weight: 500;
 }
+
 .right-part input:focus {
-	border: 1.5px solid var(--blue);
+    border: 1.5px solid var(--blue);
 }
+
 .right-part input::placeholder {
-	color: hsla(249, 10%, 26%, 0.678);
+    color: hsla(249, 10%, 26%, 0.678);
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
-.right-part button[type = submit] {
-	cursor: pointer;
-	background-color: var(--green);
-	box-shadow: 0px 4px hsl(154, 56%, 44%);
-	color: white;
-	font-weight: 600;
-	font-size: 14px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	border: none;
+
+.right-part button[type=submit] {
+    cursor: pointer;
+    background-color: var(--green);
+    box-shadow: 0px 4px hsl(154, 56%, 44%);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
 }
-.right-part button[type = submit]:hover {
-	background-color: hsl(154, 73%, 65%);
+
+.right-part button[type=submit]:hover {
+    background-color: hsl(154, 73%, 65%);
 }
+
 .right-part .form-footer {
-	margin-top: 10px;
-	color: var(--grayish-blue);
+    margin-top: 10px;
+    color: var(--grayish-blue);
     font-size: 13px;
     text-align: center;
 
 }
+
 .right-part .form-footer span {
-	color:var(--red);
-	font-weight: 700;
+    color: var(--red);
+    font-weight: 700;
 }
 
 .error-text {
     /* display: block; */
-	text-align: right;
-	bottom: 0;
-	right: 0;
-	font-size: .8rem;
-	font-style: italic;
-	color:var(--red);
-	font-weight: 500;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    font-size: .8rem;
+    font-style: italic;
+    color: var(--red);
+    font-weight: 500;
 }
+
 .error-icon {
     /* display: block; */
-	position: absolute;
-	right: 15px;
-	top:8px
+    position: absolute;
+    right: 15px;
+    top: 8px
 }
+
 .field-group.error .error-text,
 .field-group.error .error-icon {
-	display: block;
+    display: block;
 }
+
 .field-group.error input {
-	border: 2px solid var(--red);
+    border: 2px solid var(--red);
+}
+
+@media only screen and (max-width:375px) {
+    .container {
+        background-image: url(./images/bg-intro-mobile.png);
+    }
+
+    .intro-component {
+        flex-direction: column;
+        margin: 20px 15px;
+    }
+
+    .left-part {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .left-part h1 {
+        font-size: 25px;
+    }
+
+    .left-part p {
+        font-size: 14px;
+    }
+
+    .right-part {
+        width: 90%;
+    }
+
+    .right-part .top-part {
+        max-width: 100%;
+    }
+
+    .right-part .top-part p {
+        font-size: 13px;
+        padding: 0px 30px;
+    }
+
+    .right-part .form-contaner {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .field-group{
+        margin-bottom: 10px;
+    }
+
+    .right-part input,
+    .right-part button[type=submit] {
+        font-size: 10px;
+
+    }
+    .right-part button[type=submit]{
+        margin-bottom: 15px;
+        padding: 10px 20px;
+    }
+    .right-part .form-footer {
+        font-size: 10px;
+        text-align: center;
+        width: 90%;
+        margin: auto;
+    }
+    .error-text {
+        font-size: .7rem;
+    }
+
 }
